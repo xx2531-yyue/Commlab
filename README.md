@@ -10,6 +10,10 @@ Following are my projects(?) I finished in this course.
 
 ![RED](RED.png)
 
+- [Life Story as Scroll](https://xx2531-yyue.github.io/Commlab/Cynthia-reci3)
+
+![This is what winter feels like.](winter.png)
+
 - [Tutorial](tutorial)
 ![Working wiz projects](Boba.png)
 
