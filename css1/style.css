@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+}
+
+p{
+    color:green;
+    background-color: rgb(255, 201, 255);
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 5px;
+}
+
+div{
+    border-width:3px;
+    border-color: black;
+    border-style: dotted;
+    border-radius: 20px;
+    margin: 50px;
+    padding: 20px;
+}
+div p{
+    background-color: aqua;
+}
+
+.highlight1{
+    color: aliceblue;
+}
+#specialparagraph{
+    border:chocolate 4px dotted;
+}

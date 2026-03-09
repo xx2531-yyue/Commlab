@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    background-color: bisque;
+}
+.box{
+    outline:1px dashed black;
+    width:200px;
+    height: 300px;
+    padding:30px;
+}
+.box p{
+    background-color: aquamarine;
+    text-align: center;
+}
+.one{
+    position:relative;/*in relation to the natural position. others dont care. Irregularity*/
+    left:10px;
+}
+.one span{
+    position:relative;
+    left:2px;
+}
+
+.two{
+    position: absolute;
+    left:0px;
+}
+
+.three{
+    position:fixed;
+    left:100px;
+    top:10px;
+}
+
+.five{
+    position:sticky;
+    top:0px;
+}
+
+.seven{
+    margin:auto;
+    width:100%;
+}
+.sevensChild{
+
+}

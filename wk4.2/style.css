@@ -1,0 +1,19 @@
+.card {
+  width: 320px;
+  background-color: #e8f4ff;
+  padding: 16px;              /* space inside */
+  border: 2px solid #0b3d62;  /* the edge */
+  margin: 12px;               /* space outside */
+}
+/* turn links into big blocky buttons */
+.link {
+  display: block;            /* try removing this to see inline behavior */
+  background: gold;
+  padding: 8px 12px;
+  margin: 6px 0;
+height: 80vh; /* relative to viewport (the window) width and height  */
+width: 50vw;
+}
+
+/* spans are inline by default */
+.tag { background: #ffe; }

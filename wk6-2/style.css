@@ -1,0 +1,28 @@
+body{
+    background-color: beige;
+}
+
+.header{
+    background-color: dodgerblue;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
+.p{
+    font-weight: bold;
+}
+
+.subheading{
+    outline: 3px red dotted;
+    display:flex;
+    justify-content: center;
+    margin-top: 40px; 
+
+}
+.item{
+    width:150px;
+    height:50px;
+    background-color: deeppink;
+    outline: 2px solid black;
+    text-align: center;
+}
