@@ -13,19 +13,16 @@ body{
   text-align:center;
 }
 
-/* 标题 */
 .title{
   font-size:60px;
   margin-bottom:30px;
 }
 
-/* 副标题 */
 .subtitle{
   font-size:28px;
   margin-bottom:40px;
 }
 
-/* 正文 */
 .text{
   max-width:700px;
   line-height:1.8;
@@ -36,7 +33,6 @@ body{
     color:rgb(198, 188, 162);
 }
 
-/* 微弱红光 */
 .container{
   padding:40px;
   box-shadow:0 0 40px rgba(171, 165, 165, 0.3);
