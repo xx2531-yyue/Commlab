@@ -133,14 +133,13 @@ body{
   display:block;
 }
 
-/* 三个点位置 */
+
 .menu{
   position:absolute;
   bottom:10px;
   right:10px;
 }
 
-/* 隐藏默认箭头 */
 summary{
   list-style:none;
   cursor:pointer;
@@ -154,7 +153,7 @@ summary{
   justify-content:center;
 }
 
-/* 菜单 */
+/* Menu */
 .menu-box{
   position:absolute;
   bottom:40px;
@@ -168,7 +167,6 @@ summary{
   padding:8px 0;
 }
 
-/* 菜单项 */
 .menu-box div{
   padding:8px 12px;
   cursor:pointer;
@@ -178,3 +176,76 @@ summary{
   background:#f5f5f5;
 }
 
+.menu-box a{
+  display:block;
+  padding:8px 12px;
+  text-decoration:none;
+  color:black;
+}
+
+.menu-box a:hover{
+  background:#eee;
+}
+
+/* Popup */
+.popup{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+
+  background:rgba(0,0,0,0.6);
+
+  display:none;
+
+  justify-content:center;
+  align-items:center;
+
+  z-index:1000;
+}
+
+.popup:target{
+  display:flex;
+}
+
+.popup-box{
+  background:#111;
+  color:#ff2a2a;
+
+  padding:40px;
+  border-radius:12px;
+
+  text-align:center;
+  max-width:420px;
+
+  font-size:20px;
+
+  box-shadow:0 0 40px rgba(255,0,0,0.5);
+}
+
+.popup p{
+  font-family:fantasy;
+  color: #E60023;
+}
+.popup a{
+  font-family:fantasy;
+  color: #E60023;
+}
+
+.like-box{
+  background:#f2f2f2;
+  color:#333;
+
+  box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
+.like-box p{
+  font-family: Arial, Helvetica, sans-serif;
+  color:#333;
+}
+
+.like-box a{
+  font-family: Arial, Helvetica, sans-serif;
+  color:#555;
+}

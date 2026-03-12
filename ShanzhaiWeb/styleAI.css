@@ -1,0 +1,43 @@
+body{
+  margin:0;
+  background:black;
+  color:#ff2a2a;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  height:100vh;
+
+  font-family: fantasy;
+  text-align:center;
+}
+
+/* 标题 */
+.title{
+  font-size:60px;
+  margin-bottom:30px;
+}
+
+/* 副标题 */
+.subtitle{
+  font-size:28px;
+  margin-bottom:40px;
+}
+
+/* 正文 */
+.text{
+  max-width:700px;
+  line-height:1.8;
+  font-size:18px;
+}
+
+.achievement{
+    color:whitesmoke;
+}
+
+/* 微弱红光 */
+.container{
+  padding:40px;
+  box-shadow:0 0 40px rgba(255,0,0,0.3);
+}
