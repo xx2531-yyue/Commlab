@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a0c4ff;
+    font-family: Arial, sans-serif;
+}
+
+.rain-container {
+    width: 80%;
+    position: relative;
+}
+
+.rain-text {
+    color: #fff9a0;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.rain-text span {
+    display: inline-block;   
+    transform: translateY(0px);   
+    transition: color .3s linear, transform 2.3s linear;    
+    
+}
+
+.rain-text span:hover {
+    color: #0084ff;              
+    /* animation: drop 0.6s forwards;  */
+    transform: translateY(500px);
+}
