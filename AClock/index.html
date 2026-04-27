@@ -2,14 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Chicken Timer</title>
+  <title>RGB Clock</title>
   <link rel="stylesheet" href="style.css">
-  
+  <script src="script.js" defer></script>
 </head>
+
 <body>
 
-  <button id="addChickenBtn">Get a Chicken 🐔</button>
+  <div id="container">
+    <h1>RGB CLOCK</h1>
+    <div id="time">00:00:00</div>
+    <div id="rgb">rgb(0, 0, 0)</div>
 
-  
+    <button id="startBtn">Start</button>
+  </div>
+
+  <audio id="tickSound" src="sounds/key.wav"></audio>
+
 </body>
 </html>

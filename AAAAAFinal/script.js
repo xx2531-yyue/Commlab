@@ -15,8 +15,8 @@ function startExperience() {
         bg.style.opacity = 1;
         overlay.style.opacity = 0;
     }, 500);
-
+    
     setTimeout(() => {
         text.style.opacity = 1;
-    }, 2000);
+    }, 1500);
 }
