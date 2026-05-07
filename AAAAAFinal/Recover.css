@@ -1,0 +1,105 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: white;
+    font-family: sans-serif;
+}
+
+.screen {
+    height: 200vh;
+    position: relative;
+}
+
+.content-wrapper {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.text-ouch {
+    font-size: 4rem;
+    letter-spacing: 10px;
+    display: inline-block;
+    animation: ouch-shake 0.6s cubic-bezier(.36, .07, .19, .97) both;
+}
+
+@keyframes ouch-shake {
+    0% { transform: scale(1); }
+    15% { transform: scale(1.4) rotate(-5deg); }
+    30% { transform: translate(-5px, 0) rotate(3deg); }
+    45% { transform: translate(5px, 0) rotate(-2deg); }
+    60% { transform: translate(-2px, 0) rotate(1deg); }
+    100% { transform: scale(1) rotate(0); }
+}
+
+.scroll-arrow {
+    position: absolute;
+    bottom: 50px;
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    transform: rotate(45deg);
+    animation: arrow-float 2s infinite;
+    transition: opacity 0.5s;
+}
+
+@keyframes arrow-float {
+    0%, 100% { transform: translateY(0) rotate(45deg); opacity: 0.3; }
+    50% { transform: translateY(15px) rotate(45deg); opacity: 1; }
+}
+
+/* 图片样式 */
+.fade-in-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1.2s ease;
+}
+
+.zoom-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fade-in-img.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.image-container {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dots-overlay {
+    position: relative;
+    z-index: 10;
+    font-size: 30px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    padding: 20px 40px;
+    border-radius: 50px;
+}
+
+.image-container:hover .dots-overlay {
+    opacity: 1;
+}

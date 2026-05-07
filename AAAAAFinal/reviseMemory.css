@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    background: black;
+}
+
+.scene {
+    height: 300vh;
+}
+
+.scene:last-child {
+    height: 180vh;
+}
+
+.sticky-wrapper {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg:nth-child(1) {
+    z-index: 1;
+}
+
+.bg:nth-child(2) {
+    z-index: 2;
+    opacity: 0;
+}
+
+.bg1 {
+    background-image: url("images/1.jpg");
+}
+
+.bg2 {
+    background-image: url("images/2.jpg");
+}
+
+.bg3 {
+    background-image: url("images/3.jpg");
+}
+
+.bg4 {
+    background-image: url("images/4.jpg");
+}
+
+.bg5 {
+    background-image: url("images/5.jpg");
+}
+
+.bg6 {
+    background-image: url("images/6.jpg");
+}
+
+.bg7 {
+    background-image: url("images/7.jpg");
+}
+
+.bg8 {
+    background-image: url("images/8.jpg");
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    z-index: 10;
+}
+
+.content h1 {
+    position: absolute;
+    width: 80%;
+    margin: 0;
+    font-size: 30px;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.endingScene {
+    position: relative;
+    height: 500vh;
+    background: black;
+}
+
+#blackLayer {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    z-index: 20;
+}
+
+#endingImg1,
+#endingImg2 {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%) translateY(120%);
+    width: 70%;
+    max-width: 900px;
+    opacity: 0;
+    z-index: 30;
+    transition: all 1.5s ease;
+}
+
+#endingImg1.show {
+    transform: translateX(-50%) translateY(10%);
+    opacity: 1;
+}
+
+#endingImg2.show {
+    transform: translateX(-50%) translateY(0%);
+    opacity: 1;
+}
+
+#movieCurtain {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: top 2s ease;
+}
+
+#movieCurtain.show {
+    top: 0;
+}
+
+#movieTitle {
+
+    color: white;
+
+    font-size: 58px;
+
+    line-height: 1.4;
+
+    letter-spacing: 6px;
+
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    font-weight: lighter;
+
+    text-transform: uppercase;
+
+    text-shadow: 0 0 20px rgba(255,255,255,0.15);
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition: all 2s ease;
+}
+
+#movieCurtain.show #movieTitle {
+    opacity: 1;
+}

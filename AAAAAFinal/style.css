@@ -1,70 +1,170 @@
 body {
     margin: 0;
-    padding: 0;
-    height: 100%;
+    height: 100vh;
+    font-family: sans-serif;
     overflow: hidden;
     background: black;
 }
 
+/* 黑幕 */
 #overlay {
     position: fixed;
     width: 100%;
     height: 100%;
     background: black;
     z-index: 10;
-
     opacity: 1;
-    transition: opacity 2.5s ease;
+    transition: opacity 2s ease;
 }
 
+/* 背景图 */
 #bg {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-
     object-fit: cover;
+    opacity: 0;
+    transition: opacity 2s ease;
     z-index: -1;
-
-    opacity: 0; 
-    transition: opacity 2.5s ease;
 }
 
+/* 文字提示 */
 .center-text {
     position: absolute;
     top: 40%;
     right: 5%;
     transform: translateY(-50%);
-
     color: white;
     font-size: 28px;
-    text-align: right;
     max-width: 22ch;
-
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
-    line-height: 1.3;
-
-    text-shadow: 0 0 10px rgba(0,0,0,0.7);
-
+    text-align: right;
+    font-family: Georgia, serif;
+    opacity: 0;
+    transition: opacity 2s ease;
+    z-index: 5;
 }
 
+#diary-link {
+    color: #4da6ff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Click to start */
 #start {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
     color: white;
     font-size: 24px;
     font-family: monospace;
-
     cursor: pointer;
     z-index: 20;
-
     opacity: 1;
     transition: opacity 1s ease;
+}
+
+/* 版权 */
+.credit {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    opacity: 1;
+    transition: opacity 1s ease;
+    z-index: 20;
+}
+
+/* --- 弹窗样式 --- */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.word-document {
+    width: 75%; /* 稍微加宽一点 */
+    max-width: 900px;
+    height: 80vh;
+    background: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+    border: 1px solid #999;
+}
+
+.word-header {
+    background: #2b579a;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.word-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 30px; /* 增加边距更有“画布”感 */
+    display: flex;
+    justify-content: center;
+    background: #e6e6e6;
+}
+
+/* 模拟 Word 白色纸张 */
+.page-paper {
+    background: white;
+    width: 100%;
+    max-width: 700px;
+    min-height: 100%;
+    padding: 60px 50px; /* 增加上下内边距 */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: #333;
+    font-family: 'Times New Roman', serif;
+    line-height: 1.8;
+}
+
+/* ⭐ 新增：第一段粗体居中样式 */
+.diary-bold {
+    text-align: center;
+    font-size: 1.3rem; /* 字号稍大 */
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* ⭐ 新增：第二段正常字体居中样式 */
+.diary-normal {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #444; /* 颜色稍微浅一点，拉开层次 */
 }
 
 

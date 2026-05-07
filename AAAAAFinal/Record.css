@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    overflow-x: hidden;
+
+    background: black;
+
+    font-family: Georgia, serif;
+}
+
+
+
+.backgrounds {
+
+    position: fixed;
+
+    width: 100%;
+    height: 100vh;
+
+    top: 0;
+    left: 0;
+
+    z-index: -5;
+}
+
+.bg {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100vh;
+
+    object-fit: cover;
+
+    opacity: 0;
+
+    transition: opacity 1s ease;
+}
+
+.bg.active {
+
+    opacity: 1;
+}
+
+
+
+.center-container {
+
+    position: fixed;
+
+    top: 80%;
+    left: 50%;
+
+    transform: translate(-50%, 120%);
+
+    width: 500px;
+    height: 350px;
+
+    background: rgba(245, 235, 210, 0.9);
+
+    border-radius: 12px;
+
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+
+    overflow: hidden;
+
+    z-index: 10;
+
+    transition: transform 1.5s ease, opacity 1.5s ease;
+}
+
+
+
+.center-container.show {
+
+    transform: translate(-50%, -50%);
+}
+
+
+
+.center-container.leave {
+
+    transform: translate(-50%, 180%);
+
+    opacity: 0;
+}
+
+
+
+.center-container::before,
+.memory-diary::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            transparent,
+            transparent 27px,
+            rgba(0,0,0,0.08) 28px
+        );
+}
+
+
+
+.center-container::after,
+.memory-diary::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 55px;
+
+    width: 2px;
+    height: 100%;
+
+    background: rgba(180, 80, 80, 0.4);
+}
+
+
+.text {
+
+    font-family: "Indie Flower", cursive;
+
+    position: absolute;
+
+    color: #3a2d1f;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition: all 1s ease;
+
+    max-width: 170px;
+}
+
+.show {
+
+    opacity: 1;
+
+    transform: translateY(0px);
+}
+
+
+
+#text1 {
+
+    top: 35px;
+    left: 85px;
+}
+
+#text2 {
+
+    top: 95px;
+    right: 40px;
+}
+
+#text3 {
+
+    bottom: 85px;
+    left: 95px;
+}
+
+#text4 {
+
+    bottom: 50px;
+    right: 35px;
+}
+
+
+
+#blackScreen {
+
+    position: fixed;
+
+    width: 100%;
+    height: 100vh;
+
+    top: 0;
+    left: 0;
+
+    background: black;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: opacity 1.5s ease;
+
+    z-index: 15;
+}
+
+#blackScreen.show {
+
+    opacity: 1;
+}
+
+
+
+.memory-scene {
+
+    position: fixed;
+
+    width: 100%;
+    height: 100vh;
+
+    top: 0;
+    left: 0;
+
+    z-index: 1;
+}
+
+#memoryBg {
+
+    width: 100%;
+    height: 100vh;
+
+    object-fit: cover;
+
+    opacity: 0;
+
+    filter: blur(20px);
+
+    transition: all 2s ease;
+}
+
+#memoryBg.show {
+
+    opacity: 1;
+}
+
+
+
+#memoryBg.fadeOut {
+
+    opacity: 0;
+}
+
+
+
+.memory-diary {
+
+    position: fixed;
+
+    top: 82%;
+    left: 50%;
+
+    transform: translate(-50%, 120%);
+
+    width: 500px;
+    height: 350px;
+
+    background: rgba(245, 235, 210, 0.9);
+
+    border-radius: 12px;
+
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+
+    overflow: hidden;
+
+    z-index: 20;
+
+    transition: transform 1.5s ease;
+}
+
+
+
+.memory-diary.show {
+
+    transform: translate(-50%, -50%);
+}
+
+
+
+.memoryText {
+
+    font-family: "Indie Flower", cursive;
+
+    position: absolute;
+
+    color: #3a2d1f;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    filter: blur(5px);
+
+    cursor: pointer;
+
+    transition: all 1s ease;
+
+    max-width: 170px;
+}
+
+
+
+.memoryText.clear {
+
+    filter: blur(0px);
+}
+
+
+
+#memoryText1 {
+
+    top: 35px;
+    left: 85px;
+}
+
+#memoryText2 {
+
+    top: 95px;
+    right: 40px;
+}
+
+#memoryText3 {
+
+    bottom: 85px;
+    left: 95px;
+}
+
+#memoryText4 {
+
+    bottom: 50px;
+    right: 35px;
+}
+
+
+/* 便利贴 */
+
+#stickyNote {
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    width: 320px;
+
+    opacity: 0;
+
+    transform: translate(-50%, -50%) scale(0.3);
+
+    z-index: 30;
+
+    transition: all 2s ease;
+
+    cursor: pointer;
+}
+
+
+
+#stickyNote.show {
+
+    opacity: 1;
+
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#stickyNote.attach {
+
+    top: 72%;
+    left: 58%;
+
+    transform: translate(-50%, -50%) scale(0.35) rotate(-8deg);
+}
+
+
+
+.scroll-space {
+
+    height: 16000px;
+}
+
+
+.backgrounds {
+
+    transition: opacity 2s ease;
+}
+
+.backgrounds.hideBackgrounds {
+
+    opacity: 0;
+
+    pointer-events: none;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="Restaurant.css">
+</head>
+<body>
+
+    <div class="background-wrapper">
+        <div id="bg1" class="bg-layer" style="background-image: url('images/Restaurant1.jpg'); opacity: 1;"></div>
+        <div id="bg2" class="bg-layer" style="background-image: url('images/Restaurant2.jpg'); opacity: 0;"></div>
+        <div id="bg3" class="bg-layer" style="background-image: url('images/Restaurant3.jpg'); opacity: 0;"></div>
+    </div>
+    
+    <div class="scroll-content">
+        <div class="top-spacer"></div>
+
+        <div id="line1" class="step" data-side="left">
+            <span>What's it like to suddenly get your memory back?</span>
+        </div>
+    
+        <div id="line2" class="step" data-side="right">
+            <span>Emmm...I remember yesterday really clearly, but before that it just goes back to high school.</span>
+        </div>
+
+        <div id="line3" class="step" data-side="right">
+            <span>The three years in between are completely blank...</span>
+        </div>
+
+        <div id="line4" class="step" data-side="right">
+            <span>It's like you became an adult overnight?!</span>
+        </div>
+
+        <div id="line5" class="step" data-side="left">
+            <span>I see...Is there any chance that the missing part of the memory could come back?</span>
+        </div>
+
+        <div id="line6" class="step" data-side="right">
+            <span>Everything I wrote in my diary is just… records now. They said it's really hard to turn them back into memories.</span>
+        </div>
+
+        <div id="line7" class="step" data-side="left">
+            <span>Ahh.</span>
+        </div>
+
+        <div id="line8" class="step" data-side="right">
+            <span>By the way… do you know who 
+                <span class="mysterious-link" onclick="goToTargetPage()">this person</span> is?
+            </span>
+        </div>
+        
+    </div>
+
+    <div class="scroll-arrow-wrapper" id="scrollArrow">
+        <div class="arrow"></div>
+        <div class="arrow"></div>
+    </div>
+
+    <script src="Restaurant.js"></script>
+</body>
+</html>

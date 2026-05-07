@@ -9,18 +9,50 @@
 </head>
 
 <body>
-    <div id="overlay"></div>
 
-    <img src="images/Opening.jpg" id="bg">
+<div id="overlay"></div>
 
-    <div class="center-text" id="text">
-        <p>I developed amnesia after a car accident.</p>
-        <p>Take a look at the diary on my computer.</p>
+<img src="images/Opening.jpg" id="bg">
+
+<div class="center-text" id="text">
+    <p>I developed amnesia after a car accident.</p>
+    <p>Take a look at the diary on <a href="#" id="diary-link">my computer</a>.</p>
+</div>
+
+<div id="start">Click to Start</div>
+
+<div class="credit">
+    Adapted from “Even If This Love Disappears from the World Tonight(2022)”
+</div>
+
+<div id="computer-popup" class="popup-overlay">
+    <div class="word-document">
+        <div class="word-header">
+            <span>Diary.docx - Microsoft Word</span>
+            <button class="close-btn">×</button>
+        </div>
+        
+        <div class="word-content">
+            <div class="page-paper">
+                <p class="diary-bold">
+                    <b>I had a car accident on the first day of Golden Week. Once I fall asleep, I lose all memories of that day. I keep a diary to record, as much as possible, the memories that disappear every time I wake up.</b>
+                </p>
+        
+                <p class="diary-normal">
+                    This records everything that happened from May 5, 2019 up until yesterday. After waking up, make sure to read it through and remember it all.<br>
+                    ......<br>
+                    ......<br>
+                </p>
+            </div>
+        </div>
+
     </div>
+</div>
 
-    <div id="start">Click to Start</div>
 
-    <audio id="alarm" src="sounds/alarm.mp3"></audio>
+
+
+<audio id="alarm" src="sounds/alarm.mp3"></audio>
+
 </body>
-
 </html>
