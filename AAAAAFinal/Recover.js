@@ -1,27 +1,39 @@
-window.addEventListener('scroll', () => {
-    const arrow = document.querySelector('.scroll-arrow');
+window.addEventListener("scroll", function () {
+
+    let arrow = document.querySelector(".scroll-arrow");
     
     if (window.scrollY > 50) {
-        if(arrow) arrow.style.opacity = '0';
+        arrow.style.opacity = "0";
     } else {
-        if(arrow) arrow.style.opacity = '1';
+        arrow.style.opacity = "1";
     }
 
-    const images = document.querySelectorAll('.fade-in-img, .zoom-img');
-    images.forEach(img => {
-        const rect = img.parentElement.getBoundingClientRect();
-        if (rect.top <= 0) {
-            img.classList.add('active');
+    let images = document.querySelectorAll(".fade-in-img, .zoom-img");
+
+    images.forEach(function(img, index) {
+
+        if (window.scrollY > index * 400) {
+            img.classList.add("active");
         } else {
-            img.classList.remove('active');
+            img.classList.remove("active");
         }
+
     });
+
 });
 
-document.getElementById('nextTrigger').addEventListener('click', () => {
-    document.body.style.transition = 'opacity 1s';
-    document.body.style.opacity = '0';
-    setTimeout(() => {
+
+let nextButton = document.querySelector("#nextTrigger");
+
+nextButton.addEventListener("click", function () {
+
+    document.body.style.transition = "opacity 1s";
+    document.body.style.opacity = "0";
+
+    setTimeout(function () {
+
         window.location.href = "Restaurant.html";
+
     }, 1000);
+
 });

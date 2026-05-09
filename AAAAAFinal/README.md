@@ -1,17 +1,14 @@
 # Even If This Love Disappears From The World Tonight
->Today, can you still tell where you end and AI begins?
+> Do not forget Kamiya Toru.
 
-Shanzhai Web Project by *Xinyue Xu*
+Adapted for the Web Final Project by *Xinyue Xu*
 
 ## Short Description
 This project is an interactive, mainly scroll-driven narrative adapted from the movie **Even If This Love Disappears from the World Tonight**, exploring love, memory, and loss through fragmented storytelling. 
-## Concept
-Pinterest has long been a place where people begin creative projects by collecting images and building mood boards. Today, AI has started to play a similar role: users ask AI for ideas, references, and inspiration. 
+## Abstract
+This web project adapts a story about a girl with amnesia who suddenly regains her original memories, only to lose all memories formed during the period of her memory loss. As she notices traces of an unfamiliar boy throughout her notebook, she begins searching for who he is, unaware that her best friend has been helping erase his existence from her memory. The website invites viewers to experience the fragmented emotional process of memory formation, recognition, and love through a scroll-driven narrative. 
 
-By capturing the similarity between these two, **Ai**nterest attempts to materialize the presence of AI in the process of creative inspiration by recreating a visual environment and interactions similar to Pinterest. Users can like images or select “Not Interested,” which triggers different pop-up responses, eventually leading to multiple different endings.
-
-Through this playful interaction, the project invites viewers to reflect on the relationship between humans and AI: as AI technologies gradually become more powerful, where does individual creativity end, and where does the influence of AI begin? If we have been aware of this invisible guidance, can we truly resist it, or are we already part of the system?
 ## Demo
-![Demo1](Demo1.GIF)
+![Demo1](Demo.GIF)
 
-**Click on this to try [Ainterest](https://xx2531-yyue.github.io/Commlab/ShanzhaiWeb/).**
+**Click on this to [start the story](https://xx2531-yyue.github.io/Commlab/AAAAAFinal/).**
